@@ -3,7 +3,7 @@ package csci318.demo.model;
 import csci318.demo.model.event.BookEvent;
 import org.springframework.data.domain.AbstractAggregateRoot;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
