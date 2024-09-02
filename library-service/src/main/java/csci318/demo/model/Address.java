@@ -1,12 +1,13 @@
 package csci318.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
 public class Address {
 
     @Id
-    @GeneratedValue
+    //@GeneratedValue
     private long id;
 
     @Column(nullable = false)
@@ -15,6 +16,9 @@ public class Address {
     // this one-to-one relationship
     // is bidirectional
     @OneToOne(mappedBy = "address")
+    @JsonIgnore
+    // Hide the library field.
+    // This prevents an infinite nesting references of library and address.
     private Library library;
 
     public Address() {

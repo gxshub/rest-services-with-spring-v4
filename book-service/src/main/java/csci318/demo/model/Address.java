@@ -1,20 +1,11 @@
 package csci318.demo.model;
 
-import jakarta.persistence.*;
-
-@Entity
 public class Address {
 
-    @Id
-    @GeneratedValue
     private long id;
 
-    @Column(nullable = false)
     private String location;
 
-    // this one-to-one relationship
-    // is bidirectional
-    @OneToOne(mappedBy = "address")
     private Library library;
 
     public Address() {
