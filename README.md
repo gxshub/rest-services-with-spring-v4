@@ -4,8 +4,12 @@
 This version includes the domain event patterns. 
 The __Book Service__ implements two ways of publishing and handling domain events
 which are enabled in Spring Boot, i.e., 
-the `AbstractAggregateRoot` generic class and 
-the `ApplicationEventPublisher` interface.
+the `AbstractAggregateRoot` generic class
+(used in [`Book.java`](./book-service/src/main/java/csci318/demo/model/Book.java) and 
+the `ApplicationEventPublisher` interface
+(used in [`BookService.java`](./book-service/src/main/java/csci318/demo/service/BookService.java)).
+
+Reference: [https://www.baeldung.com/spring-data-ddd](https://www.baeldung.com/spring-data-ddd)
 
 #### Demonstrated Use Cases
 (1) Borrow the book `0-684-84328-5` from the Wollongong City Library (2500):
@@ -37,7 +41,7 @@ Go to the H2 console [http://localhost:8082/h2-console/](http://localhost:8082/h
 _Compare the `BOOK` table and the `BOOK_EVENT` table (which is 
 considered as an event store)._
 
-### Lab Practice
+_TODO._
 When borrowing a book which is not available in the library 
 (i.e., performing step (1) two consecutive times), an event is not
 created in the `BOOK_EVENT` event store.
