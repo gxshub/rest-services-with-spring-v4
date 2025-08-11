@@ -1,4 +1,4 @@
-package csci318.demo.controller.dto;
+package csci318.demo.service.dto;
 
 public class BookDTO {
 
